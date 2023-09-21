@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="fragmentos/fragmento2 :: cabecera('Recursos Humanos - TravelTrip')"></head>
+    <body  >
+
+        <main>
+            <div class="container px-4 py-5">
+                <h3>Recursos Humanos - TravelTrip</h3>
+                <h1 class="pb-2 border-bottom"></h1>
+
+                <div class="d-flex mt-3 mb-4">
+                    <a class="btn btn-primary mb-2" th:href="@{'/empleados'}">Empleados</a>
+                    <a class="btn btn-primary mb-2" th:href="@{'/historial'}">Historial</a>
+                    <a class="btn btn-primary mb-2" th:href="@{'/reportes'}">Reportes</a>
+                </div>
+                <div class="alert alert-primary" role="alert" th:if="${msg != null}" th:text="${msg}">
+                    A simple primary alert—check it out!
+                </div>
+
+
+
+            </div>
+        </main>
+        <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    </body>
+</html>
+
+
