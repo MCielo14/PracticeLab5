@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.Instant;
+import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -34,8 +35,8 @@ public class Employee {
     @Column(name = "phone_number", length = 20)
     private String phoneNumber;
 
-    @Column(name = "hire_date", nullable = false)
-    private Instant hireDate;
+    @Column(name = "hire_date")
+    private Date hireDate;
 
     @ManyToOne
     @JoinColumn(name = "job_id", nullable = false)
